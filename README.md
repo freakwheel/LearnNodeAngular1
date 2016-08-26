@@ -281,6 +281,7 @@ CloudBees have provided a CI/deployment setup:
 If you run this, you will get a cloned version of this repo to start working on in a private git repo,
 along with a CI service (in Jenkins) hosted that will run unit and end to end tests in both Firefox and Chrome.
 
+This is a learing project and allot of material is taken from other sources, We have taken help from material provided at https://github.com/angular/angular-seed and http://krispo.github.io/angular-nvd3/
 
 ## Contact
 
