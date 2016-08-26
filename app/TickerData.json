@@ -1,0 +1,23 @@
+
+[
+            {   "rateChange": 0.15,
+                "currentValue": 181.0595182586,
+                "stock": "AAPL"
+            },
+            {   "rateChange": -0.15,
+                "currentValue": 559.502714843,
+                "stock": "GOOG"
+            },
+            {   "rateChange":0.15,
+                "currentValue": 575.792111077,
+                "stock": "CSCO"
+            },
+            {   "rateChange":-0.15,      
+                "currentValue": 614.2966938214,
+                "stock": "CBS"
+            },
+            {   "rateChange":-0.2,      
+                "currentValue": 514.2966938214,
+                "stock": "NSDQ"
+            }
+]

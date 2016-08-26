@@ -1,0 +1,176 @@
+<div class="row">
+
+    <div class="col-md-12">
+        <div class="x_panel">
+            <!--
+			<div class="x_title">
+
+	<div class="clearfix"></div>
+</div>
+-->
+
+            <div class="x_content">
+
+                <div class="col-md-8 col-lg-7 col-sm-7">
+                    <!-- blockquote -->
+
+
+
+                    <div class="col-xs-12 col-md-5">
+                        <div class="">
+                            <span class="company-name-for-stats"><i class="fa fa-arrow-up green"></i> S &amp; P 500 (^GSPC)</span>
+                            <div class="company-name-description">SNP - SNP Delayed Price. Currency in USD</div>
+
+
+                            <div class="company-stat-big">2,187.02</div>
+                            <span class="company-stat-up-down green">4.80 (0.22%)</span>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-xs-12 col-md-4">
+                        <div class="">
+                            <div class="">
+
+                                <div class="company-stat-volume">VOLUME</div>
+                                <span class="company-stat-volume-numbers">493,900</span>
+                            </div>
+
+
+                            <div class="">
+
+                                <div class="company-stat-volume">MARKET CAP</div>
+                                <span class="company-stat-volume-numbers">RS. 81,932.82M</span>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-xs-12 col-md-3">
+
+                        <div class="inline-block">
+
+                            <div class="company-stat-volume">P/E RATIO</div>
+                            <span class="company-stat-volume-numbers">10.7471</span>
+                        </div>
+
+
+                        <div class="company-stats-split-border hidden-xs">
+
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+
+                </div>
+
+
+
+
+
+
+                <div class="col-xs-12 col-md-4 col-lg-4 col-sm-5">
+
+
+                    <div class="company-name">D.G. Khan Cement Company Limited</div>
+
+                    <div class="company-type">CEMENT</div>
+
+
+
+                </div>
+
+
+
+                <div class="clearfix"></div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <br>
+
+
+
+
+    <!--<div class="col-md-12">
+		<div class="x_panel">
+			<div class="x_title">
+				<h2 class="panel-heading">Detail</h2>
+				<div class="panel-time"> Last updates are posted 4 hours ago</div>
+
+
+				<div class="clearfix"></div>
+			</div>
+
+
+			<div class="x_content">
+
+			 <nvd3 options="stackedAreaChartOptions" data="stackedAreaChartData" api="api"></nvd3>
+
+
+			</div>
+		</div>
+		-->
+
+
+    <div class="x_panel">
+        <div class="x_title">
+            <h2 class="panel-heading">Monthly Stock Price</h2>
+            <div class="panel-time"> Last updates are posted 4 hours ago</div>
+
+
+            <div class="clearfix"></div>
+        </div>
+
+
+        <div class="x_content"  >
+            <nvd3 options="Companydetails" api="api4"></nvd3>	
+            <table st-table="rowCollection"  class="table table-striped"" >
+                <thead>
+                    <tr>
+                        <th>Stock</th>
+                        <th>Date</th>
+                        <th>5th Percentile</th>
+                        <th>25th Percentile</th>
+                        <th>75th Percentile</th>
+                        <th>95th Percentile</th>
+                        <th>Change(%)</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="row in rowCollection">
+                        <td>{{row.stock}}</td>
+                        <td>{{row.stDate | date : "dd/MM/y"}}</td>
+                        <td>{{row.fifthPercentile}}</td>
+                        <td>{{row.twentyFifthPercentile}}</td>
+                        <td>{{row.seventyFifthPercentile}}</td>
+                        <td>{{row.nintyFifthPercentile}}</td>
+                        <td>{{row.rateChange}}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+
+</div>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="en" ng-app="myApp" class="no-js">
+<!--<![endif]-->
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>My AngularJS App</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" href="bower_components/nvd3/build/nv.d3.css">
+	<link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+	<link rel="stylesheet" href="app.css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+</head>
+
+<body class="nav-md">
+	<!--  <ul class="menu">
+   <li><a href="#!/view1">view23</a></li>
+   <!--   <li><a href="#!/view2">view2</a></li>
+  </ul>-->
+
+	<!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+	<div class="container body">
+		<div class="main_container">
+			<div class="col-md-3 left_col">
+				<div class="left_col scroll-view">
+
+					<div class="navbar nav_title" style="border: 0;">
+						<a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Netpace</span></a>
+					</div>
+					<div class="clearfix"></div>
+
+					<!-- menu prile quick info -->
+					<!--
+                            <div class="profile">
+                              <div class="profile_pic">
+                                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                              </div>
+                              <div class="profile_info">
+                                <span>Welcome,</span>
+                                <h2>Talha Zahid</h2>
+                              </div>
+                            </div>
+                  -->
+					<!-- /menu prile quick info -->
+
+
+
+					<!-- sidebar menu -->
+					<div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+
+						<div class="menu_section">
+							<!--  <h3>General</h3> -->
+							<ul class="nav side-menu">
+								<li class="menu-active"><a><i class="fa fa-dashboard"></i> Dashboard </a> </li>
+								<li><a href="#!/detail"><i class="fa fa-pie-chart"></i> Companies</a> </li>
+								<li><a><i class="fa fa-line-chart"></i> Industry Indicators</a> </li>
+								<li><a><i class="fa fa-bar-chart"></i> Stock Screening</a> </li>
+							</ul>
+						</div>
+
+
+					</div>
+					<!-- /sidebar menu -->
+
+					<!-- /menu footer buttons -->
+					<!-- <div class="sidebar-footer hidden-small">
+                      <a data-toggle="tooltip" data-placement="top" title="Settings">
+                          <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                      </a>
+                      <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                          <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+                      </a>
+                      <a data-toggle="tooltip" data-placement="top" title="Lock">
+                          <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+                      </a>
+                      <a data-toggle="tooltip" data-placement="top" title="Logout">
+                          <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                      </a>
+                  </div> -->
+					<!-- /menu footer buttons -->
+				</div>
+			</div>
+			<!-- top navigation -->
+			<div class="top_nav">
+
+				<div class="nav_menu">
+					<nav class="" role="navigation">
+						<div class="nav toggle">
+							<a id="menu_toggle" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+						</div>
+
+						<ul class="nav navbar-nav navbar-right">
+							<li class="">
+								<a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+									<img src="images/img.jpg" alt="">Talha Zahid
+									<span class=" fa fa-angle-down"></span>
+								</a>
+								<ul class="dropdown-menu dropdown-usermenu animated fadeInDown pull-right">
+									<li><a href="javascript:;">  Profile</a>
+									</li>
+									<li>
+										<a href="javascript:;">
+											<span class="badge bg-red pull-right">50%</span>
+											<span>Settings</span>
+										</a>
+									</li>
+									<li>
+										<a href="javascript:;">Help</a>
+									</li>
+									<li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+									</li>
+								</ul>
+							</li>
+
+							<li role="presentation" class="dropdown">
+								<a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+									<i class="fa fa-envelope-o"></i>
+									<span class="badge bg-green">6</span>
+								</a>
+								<ul id="menu1" class="dropdown-menu list-unstyled msg_list animated fadeInDown" role="menu">
+									<li>
+										<a>
+											<span class="image">
+                                        <img src="images/img.jpg" alt="Profile Image" />
+                                    </span>
+											<span>
+                                        <span>John Smith</span>
+											<span class="time">3 mins ago</span>
+											</span>
+											<span class="message">
+                                        Film festivals used to be do-or-die moments for movie makers. They were where...
+                                    </span>
+										</a>
+									</li>
+									<li>
+										<a>
+											<span class="image">
+                                        <img src="images/img.jpg" alt="Profile Image" />
+                                    </span>
+											<span>
+                                        <span>John Smith</span>
+											<span class="time">3 mins ago</span>
+											</span>
+											<span class="message">
+                                        Film festivals used to be do-or-die moments for movie makers. They were where...
+                                    </span>
+										</a>
+									</li>
+									<li>
+										<a>
+											<span class="image">
+                                        <img src="images/img.jpg" alt="Profile Image" />
+                                    </span>
+											<span>
+                                        <span>John Smith</span>
+											<span class="time">3 mins ago</span>
+											</span>
+											<span class="message">
+                                        Film festivals used to be do-or-die moments for movie makers. They were where...
+                                    </span>
+										</a>
+									</li>
+									<li>
+										<a>
+											<span class="image">
+                                        <img src="images/img.jpg" alt="Profile Image" />
+                                    </span>
+											<span>
+                                        <span>John Smith</span>
+											<span class="time">3 mins ago</span>
+											</span>
+											<span class="message">
+                                        Film festivals used to be do-or-die moments for movie makers. They were where...
+                                    </span>
+										</a>
+									</li>
+									<li>
+										<div class="text-center">
+											<a href="inbox.html">
+												<strong>See All Alerts</strong>
+												<i class="fa fa-angle-right"></i>
+											</a>
+										</div>
+									</li>
+								</ul>
+							</li>
+
+						</ul>
+					</nav>
+				</div>
+
+			</div>
+			<!-- /top navigation -->
+			<div class="right_col" role="main">
+
+
+
+
+				<div class="page-title">
+					<div class="title_left">
+
+
+						<!-- Breadcrums  -->
+						<div> Home </div> /
+						<div> Design </div>
+						<!-- Breadcrums  -->
+
+
+
+						<div class="welcome-message">
+							Hi <span>Peter Clark</span>, Welcome back
+
+							<div class="welcome-message-info"> Develop your best investment strategy </div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+
+
+				<div class="col-md-12 col-xs-12 margin-bottom-15 white-bg border-rad-4px">
+
+					<!-- top tiles -->
+					<div class="row tile_count " ng-controller="HighlightsCtrl">
+						<div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+							<div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id" class="animated flipInY col-md-3 col-sm-4 col-xs-6 tile_stats_count">
+								<div class="left"></div>
+								<div class="right">
+
+									<div ng-class="slide.text2>=0 ? 'count-circles bg-green':'count-circles bg-red'"><i ng-class="slide.text2>=0 ? 'fa fa-arrow-up white count-circles-icon-font-size':'fa fa-arrow-down white count-circles-icon-font-size'"></i></div>
+									<!--<span class="count_top"><i class="fa fa-arrow-up red"></i>{{slide.text3}}</span>-->
+									<span class="count_top"><i ng-class="slide.text2>=0 ? 'fa fa-arrow-up green' :'fa fa-arrow-down red'"></i>{{slide.text3}}</span>
+									<div class="count">{{slide.text1}}</div>
+									<span class="count_bottom up">{{slide.text2}}</span>
+								</div>
+							</div>
+						</div>
+						<!--<div class="animated flipInY col-md-3 col-sm-4 col-xs-6 tile_stats_count">
+							<div class="left"></div>
+							<div class="right">
+
+								<div class="count-circles bg-red"><i class="fa fa-arrow-down white count-circles-icon-font-size"></i></div>
+								<span class="count_top"><i class="fa fa-arrow-down red"></i> Dow 30</span>
+								<div class="count">18,597.70</div>
+								<span class="count_bottom green">4.80 (0.22%)</span>
+							</div>
+						</div>
+						<div class="animated flipInY col-md-3 col-sm-4 col-xs-6 tile_stats_count">
+							<div class="left"></div>
+							<div class="right">
+
+								<div class="count-circles bg-green"><i class="fa fa-arrow-up white count-circles-icon-font-size"></i></div>
+								<span class="count_top"><i class="fa fa-arrow-up green"></i> Nasdaq</span>
+								<div class="count">5,240.15</div>
+								<span class="count_bottom green">4.80 (0.22%)</span>
+							</div>
+						</div>
+						<div class="animated flipInY col-md-3 col-sm-4 col-xs-6 tile_stats_count">
+							<div class="left"></div>
+							<div class="right">
+
+								<div class="count-circles bg-red"><i class="fa fa-arrow-down white count-circles-icon-font-size"></i></div>
+								<span class="count_top"><i class="fa fa-arrow-down red"></i> S & P 500</span>
+								<div class="count">2,187.02</div>
+								<span class="count_bottom green">4.80 (0.22%)</span>
+							</div>
+						</div>-->
+
+
+
+					</div>
+					<!-- /top tiles -->
+
+				</div>
+
+
+				<br>
+
+
+
+
+
+				<div ng-view></div>
+
+
+
+				<!-- footer content -->
+
+				<!--
+				<footer>
+					<div class="copyright-info">
+						<p class="pull-right">Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+						</p>
+					</div>
+					<div class="clearfix"></div>
+				</footer>
+-->
+
+
+				<!-- /footer content -->
+
+
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js"></script>
+	<script src="bower_components/angular-route/angular-route.js"></script>
+	<script src="bower_components/angular-resource/angular-resource.js"></script>
+	<script src="bower_components/d3/d3.js"></script>
+	<script src="bower_components/nvd3/build/nv.d3.js"></script>
+	<!-- or use another assembly -->
+	<script src="bower_components/angular-nvd3/dist/angular-nvd3.js"></script>
+	<script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+	<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+	<script src="bower_components/angular-smart-table/dist/smart-table.min.js"></script>
+	<script src="app.js"></script>
+	<script src="controller/main.js"></script>
+	<script src="services/services.js"></script>
+
+</body>
+
+</html>

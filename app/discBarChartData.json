@@ -1,0 +1,25 @@
+{
+    "discBarChartData": [
+        {
+            "key": "Cumulative Return",
+            "values": [
+                {
+                    "y": 8.01,
+                    "x": "AAPL"
+                },
+                {
+                    "y": -5.05,
+                    "x": "GOOG"
+                },
+                {
+                    "y": 10.01,
+                    "x": "CSCO"
+                },
+                {
+                    "y": -6.08,
+                    "x": "CBS"
+                }
+            ]
+        }
+    ]
+}

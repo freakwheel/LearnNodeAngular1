@@ -1,0 +1,118 @@
+<div class="row">
+
+	<div class="col-md-6 col-sm-6 col-xs-12">
+		<div class="x_panel">
+			<div class="x_title">
+				<h2 class="panel-heading">Next Day Stock Price</h2>
+				<div class="panel-time"> Last updates are posted 4 hours ago</div>
+				<div class="clearfix"></div>
+			</div>
+
+
+			<div class="x_content">
+
+				<nvd3 options="multiBarChartOptions" data="multiBarChartData" api="api1"> </nvd3>
+
+
+			</div>
+		</div>
+	</div>
+
+	<br>
+
+	<div class="col-md-6 col-sm-6 col-xs-12">
+		<div class="x_panel">
+			<div class="x_title">
+				<h2 class="panel-heading">Predicted Change</h2>
+				<div class="panel-time"> Last updates are posted 4 hours ago</div>
+
+				<div class="clearfix"></div>
+			</div>
+
+
+			<div class="x_content">
+
+				<nvd3 options="discBarChartOptions" data="discBarChartData" api="api2"></nvd3>
+
+
+			</div>
+		</div>
+	</div>
+
+	<br>
+
+	<div class="col-md-12">
+		<div class="x_panel">
+			<div class="x_title">
+				<h2 class="panel-heading">Historical Data(Google)</h2>
+				<div class="panel-time"> Last updates are posted 4 hours ago</div>
+
+				<div class="clearfix"></div>
+			</div>
+
+
+			<div class="x_content">
+
+				<nvd3 options="ohlcChartOptions" data="ohlcChartData" api="api3"></nvd3>
+
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+	<div class="col-md-12">
+		<div class="x_panel">
+			<div class="x_title">
+				<h2 class="panel-heading">Next Day Stock Price</h2>
+				<div class="panel-time"> Last updates are posted 4 hours ago</div>
+
+				<div class="clearfix"></div>
+			</div>
+
+
+			<div class="x_content">
+
+
+
+				<table st-table="rowCollection" class="table table-striped">
+					<thead>
+						<tr>
+							<th>Stock</th>
+							<th>Date</th>
+							<th>5th Percentile</th>
+							<th>25th Percentile</th>
+							<th>75th Percentile</th>
+							<th>95th Percentile</th>
+							<th>Change(%)</th>
+
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="row in rowCollection">
+							<td>{{row.stock}}</td>
+							<td>{{row.stDate | date : "dd/MM/y"}}</td>
+							<td>{{row.fifthPercentile}}</td>
+							<td>{{row.twentyFifthPercentile}}</td>
+							<td>{{row.seventyFifthPercentile}}</td>
+							<td>{{row.nintyFifthPercentile}}</td>
+							<td>{{row.rateChange}}</td>
+						</tr>
+					</tbody>
+				</table>
+
+
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+</div>

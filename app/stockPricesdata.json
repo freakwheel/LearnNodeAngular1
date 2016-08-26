@@ -1,0 +1,23 @@
+[
+    
+            {
+                "stock": "AAPL",
+                "stDate": 20071211,
+                "fifthPercentile": 181.0595182586,
+                "twentyFifthPercentile": 186.0549330924,
+                "seventyFifthPercentile": 193.5705020717,
+                "nintyFifthPercentile": 199.341938545,
+                "rateChange": 1.25
+            },
+            {
+                "stock": "NSDQ",
+                "stDate": 20071211,
+                "fifthPercentile": 181.0595182586,
+                "twentyFifthPercentile": 186.0549330924,
+                "seventyFifthPercentile": 193.5705020717,
+                "nintyFifthPercentile": 199.341938545,
+                "rateChange": 1.25
+            }
+     
+    
+]
